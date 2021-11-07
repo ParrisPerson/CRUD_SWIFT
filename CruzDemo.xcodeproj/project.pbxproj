@@ -205,31 +205,22 @@
 		677FC23627380D1800B10ABB /* CruzDemo */ = {
 			isa = PBXGroup;
 			children = (
+				677FC2F72738669A00B10ABB /* Modules */,
 				677FC28627380F6000B10ABB /* Initializers */,
 				677FC2A027380FFB00B10ABB /* Extensions */,
 				677FC2B12738107000B10ABB /* API */,
 				677FC2BF2738108400B10ABB /* Preferences */,
 				677FC2D32738116200B10ABB /* Resources */,
 				677FC2CE2738110600B10ABB /* Utils */,
-				677FC26927380EAB00B10ABB /* AddInteractor.swift */,
-				677FC26827380EAB00B10ABB /* AddPresenter.swift */,
-				677FC26727380EAB00B10ABB /* AddProtocols.swift */,
 				677FC2F42738661F00B10ABB /* SceneDelegate.swift */,
 				677FC28427380F3400B10ABB /* NavigationView.swift */,
-				677FC26E27380EAC00B10ABB /* AddView.swift */,
 				677FC27A27380EC700B10ABB /* BaseView.swift */,
-				677FC26B27380EAB00B10ABB /* AddWireFrame.swift */,
 				677FC27C27380EEF00B10ABB /* BasePresenterProtocol.swift */,
 				677FC27D27380EEF00B10ABB /* BaseViewProtocol.swift */,
 				677FC27E27380EEF00B10ABB /* BaseWireFrame.swift */,
-				677FC26C27380EAB00B10ABB /* MainInteractor.swift */,
-				677FC26A27380EAB00B10ABB /* MainPresenter.swift */,
-				677FC26F27380EAC00B10ABB /* MainProtocols.swift */,
-				677FC26D27380EAC00B10ABB /* MainWireFrame.swift */,
 				677FC26627380EAB00B10ABB /* UserDataManager.swift */,
 				677FC24B27380D8100B10ABB /* Swaggers */,
 				677FC23727380D1800B10ABB /* AppDelegate.swift */,
-				677FC23B27380D1800B10ABB /* MainView.swift */,
 				677FC24027380D1900B10ABB /* Assets.xcassets */,
 				677FC24227380D1900B10ABB /* LaunchScreen.storyboard */,
 				677FC24527380D1900B10ABB /* Info.plist */,
@@ -413,6 +404,39 @@
 				677FC2E32738116200B10ABB /* OpenSans-BoldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		677FC2F62738669300B10ABB /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				677FC26927380EAB00B10ABB /* AddInteractor.swift */,
+				677FC26827380EAB00B10ABB /* AddPresenter.swift */,
+				677FC26B27380EAB00B10ABB /* AddWireFrame.swift */,
+				677FC26727380EAB00B10ABB /* AddProtocols.swift */,
+				677FC26E27380EAC00B10ABB /* AddView.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		677FC2F72738669A00B10ABB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				677FC2F8273866A400B10ABB /* Main */,
+				677FC2F62738669300B10ABB /* Add */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		677FC2F8273866A400B10ABB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				677FC26C27380EAB00B10ABB /* MainInteractor.swift */,
+				677FC26A27380EAB00B10ABB /* MainPresenter.swift */,
+				677FC26F27380EAC00B10ABB /* MainProtocols.swift */,
+				677FC26D27380EAC00B10ABB /* MainWireFrame.swift */,
+				677FC23B27380D1800B10ABB /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		C569EBD60EAB06B517E68DE8 /* Frameworks */ = {

@@ -60,8 +60,8 @@ class AddView: BaseView {
             user.id = 0
             let dateFormatter = DateFormatter()
            
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-            if let date = dateFormatter.date(from: "1953-10-14T17:27:00Z") {
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+            if let date = dateFormatter.date(from: "2021-11-07T20:00:04.625Z") {
                 user.birthdate = dateFormatter.string(from: Date())
             } else {
                 user.birthdate = ""

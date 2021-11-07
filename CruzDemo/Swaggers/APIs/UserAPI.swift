@@ -129,7 +129,7 @@ open class UserAPI {
      */
     open class func apiUserPost(payload: UserPost, completion: @escaping ((_ error: Error?) -> Void)) {
         apiUserPostWithRequestBuilder(payload: payload).execute { (response, error) -> Void in
-            completion(error);
+            completion(error)
         }
     }
 

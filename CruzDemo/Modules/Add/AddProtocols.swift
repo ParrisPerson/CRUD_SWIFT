@@ -28,12 +28,12 @@ protocol AddPresenterProtocol: BasePresenterProtocol {
 protocol AddInteractorOutputProtocol: AnyObject {
     
     // INTERACTOR -> PRESENTER
-   
+   func postSuccess()
 }
 
 protocol AddInteractorInputProtocol: AnyObject {
     var presenter: AddInteractorOutputProtocol? { get set }
     
     // PRESENTER -> INTERACTOR
-     
+    func touchAddButton(user: UserPost)
 }

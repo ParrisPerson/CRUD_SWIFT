@@ -11,6 +11,7 @@ import Foundation
     var users : [User] = []
     
     func viewDidLoad() {
+        self.view?.showProgress()
         interactor!.getUsers()
     }
     
@@ -23,6 +24,7 @@ import Foundation
     }
     
     func touchDeleteButton(id: Int) {
+        self.view?.showProgress()
         interactor!.deleteUsers(id: id)
     }
     
@@ -35,10 +37,12 @@ import Foundation
 extension MainPresenter: MainInteractorOutputProtocol {
     func getSuccess(data: [User]){
         users = data
+        self.view?.hideProgress()
         self.view!.reloadTable() 
     }
     
     func getDelSuccess(){
+        self.view?.hideProgress()
         interactor!.getUsers()
          
     }

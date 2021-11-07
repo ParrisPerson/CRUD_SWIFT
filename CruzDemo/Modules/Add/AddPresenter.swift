@@ -14,13 +14,16 @@ import Foundation
     }
     
     func touchAddButton(user: UserPost) {
-        UserAPI.apiUserPost(payload: user) {_ in
-            self.view!.dismiss()
-        }
+        self.view?.showProgress()
+        interactor!.touchAddButton(user: user)
+        
     }
     
 }
 
 extension AddPresenter: AddInteractorOutputProtocol {
-    
+    func postSuccess() {
+        self.view?.hideProgress()
+        self.view?.dismiss()
+    }
 }
