@@ -84,7 +84,7 @@
 		677FC2EF2738116200B10ABB /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 677FC2E12738116200B10ABB /* OpenSans-ExtraBoldItalic.ttf */; };
 		677FC2F02738116200B10ABB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 677FC2E22738116200B10ABB /* OpenSans-Regular.ttf */; };
 		677FC2F12738116200B10ABB /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 677FC2E32738116200B10ABB /* OpenSans-BoldItalic.ttf */; };
-		677FC2F32738603300B10ABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677FC2F22738603300B10ABB /* SceneDelegate.swift */; };
+		677FC2F52738661F00B10ABB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677FC2F42738661F00B10ABB /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,7 +167,7 @@
 		677FC2E12738116200B10ABB /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		677FC2E22738116200B10ABB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		677FC2E32738116200B10ABB /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		677FC2F22738603300B10ABB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../../../CRUD/appmovil-ios/CRUD/Application/SceneDelegate.swift"; sourceTree = "<group>"; };
+		677FC2F42738661F00B10ABB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DA806C2CBDE3CC875D5DFAF1 /* Pods_CruzDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CruzDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA195148FFAC99DD958BBF88 /* Pods-CruzDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CruzDemo.debug.xcconfig"; path = "Target Support Files/Pods-CruzDemo/Pods-CruzDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,7 +214,7 @@
 				677FC26927380EAB00B10ABB /* AddInteractor.swift */,
 				677FC26827380EAB00B10ABB /* AddPresenter.swift */,
 				677FC26727380EAB00B10ABB /* AddProtocols.swift */,
-				677FC2F22738603300B10ABB /* SceneDelegate.swift */,
+				677FC2F42738661F00B10ABB /* SceneDelegate.swift */,
 				677FC28427380F3400B10ABB /* NavigationView.swift */,
 				677FC26E27380EAC00B10ABB /* AddView.swift */,
 				677FC27A27380EC700B10ABB /* BaseView.swift */,
@@ -591,7 +591,7 @@
 				677FC26527380D8100B10ABB /* Configuration.swift in Sources */,
 				677FC26127380D8100B10ABB /* UserPost.swift in Sources */,
 				677FC2AB27380FFB00B10ABB /* UIButton+Extension.swift in Sources */,
-				677FC2F32738603300B10ABB /* SceneDelegate.swift in Sources */,
+				677FC2F52738661F00B10ABB /* SceneDelegate.swift in Sources */,
 				677FC28927380F6000B10ABB /* Initializer.swift in Sources */,
 				677FC29C27380F7F00B10ABB /* Switch.swift in Sources */,
 				677FC2AF27380FFB00B10ABB /* String+Extension.swift in Sources */,
