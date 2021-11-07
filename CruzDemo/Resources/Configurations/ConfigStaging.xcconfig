@@ -1,0 +1,13 @@
+//
+//  ConfigStaging.xcconfig
+//  Lendu
+//
+//   
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SERVER_URL  = serverStaging.com
+ENVIRONMENT = staging
+API_KEY = dDfy25KA4AbcAIbTGrWHimB1eaiJnCAHqBO1cQlb113QtVsKOHlobtCzUh0FTdOPkLTSEl7Wn17TW0K2jIvoMybcp4zp7beQqdX1zxKqKb6yfZnKlF3hTDaIVZbi1OIB
