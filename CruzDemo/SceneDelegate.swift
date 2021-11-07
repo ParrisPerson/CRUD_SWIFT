@@ -1,10 +1,4 @@
-//
-//  SceneDelegate.swift
-//  FRAUsuarios
-//
-//  Created by Borja Fernández on 6/9/21.
-//
-
+ 
 import UIKit
 @available(iOS 13, *)
 
