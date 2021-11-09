@@ -26,9 +26,15 @@ class MainWireFrame: BaseWireFrame {
 }
 
 extension MainWireFrame: MainWireFrameProtocol {
+ 
     
     func goToAdd(){
-        let addScreen = AddWireFrame.createModule()
+        let addScreen = AddWireFrame.createModule(user: nil)
+        navigationController?.pushViewController(addScreen, animated: true)
+    }
+    
+    func goToAddEdit(user: UserPost){
+        let addScreen = AddWireFrame.createModule(user: user)
         navigationController?.pushViewController(addScreen, animated: true)
     }
 }

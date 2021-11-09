@@ -149,7 +149,17 @@ class MainView: BaseView{
     }
     
     @objc func editButtonPressed(sender: UIButton) {
-
+        let user = presenter?.getUsers()[sender.tag]
+        let userPost : UserPost = UserPost()
+        userPost.id = user?.id
+        userPost.name = user?.name
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        userPost.birthdate = formatter.string(from: user!.birthdate)
+        
+         
+        presenter?.touchEditButton(user: userPost)
     }
     
     override func setupConstraints() {
@@ -189,6 +199,7 @@ class MainView: BaseView{
         let user = presenter!.getUsers()[indexPath.row]
         cell.title.text = user.name
         cell.delete.tag = user.id!
+        cell.edit.tag = indexPath.row
         cell.delete.addTarget(self, action: #selector(deleteButtonPressed(sender:)), for: .touchUpInside)
         cell.edit.addTarget(self, action: #selector(editButtonPressed(sender:)), for: .touchUpInside)
         return cell

@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class GlobalResponse<T: Decodable>: Decodable {
+class GlobalResponse<T: Decodable> : Decodable {
     var data: T?
     var errors: [GlobalError<String>]?
 

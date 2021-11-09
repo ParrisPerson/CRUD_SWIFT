@@ -3,6 +3,7 @@
 import Foundation
 
  class MainPresenter: MainPresenterProtocol {
+ 
 
     weak var view: MainViewProtocol?
     var interactor: MainInteractorInputProtocol?
@@ -28,8 +29,8 @@ import Foundation
         interactor!.deleteUsers(id: id)
     }
     
-    func touchEditButton(){
-        
+    func touchEditButton(user: UserPost){
+        wireFrame?.goToAddEdit(user: user) 
     }
     
 }

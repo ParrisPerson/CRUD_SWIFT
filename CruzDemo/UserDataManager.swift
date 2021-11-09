@@ -19,6 +19,6 @@ open class UserDataManager: NSObject {
         sessionManager = WSUtils.sharedInstance.wsInit()
    }
 
-   
+     
 }
    

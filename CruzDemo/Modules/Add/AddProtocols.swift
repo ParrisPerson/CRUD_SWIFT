@@ -10,10 +10,9 @@ protocol AddViewProtocol: BaseViewProtocol {
 }
 
 protocol AddWireFrameProtocol: BaseWireFrameProtocol {
-    static func createModule() -> BaseView
+    static func createModule(user: UserPost?) -> BaseView
     
     // PRESENTER -> WIREFRAME
-   
 }
 
 protocol AddPresenterProtocol: BasePresenterProtocol {
@@ -21,8 +20,12 @@ protocol AddPresenterProtocol: BasePresenterProtocol {
     var interactor: AddInteractorInputProtocol? { get set }
     var wireFrame: AddWireFrameProtocol? { get set }
     
+    var user: UserPost? { get set }
+
     // VIEW -> PRESENTER
     func touchAddButton(user: UserPost)
+    func touchEditButton(user: UserPost)
+
 }
 
 protocol AddInteractorOutputProtocol: AnyObject {
@@ -36,4 +39,6 @@ protocol AddInteractorInputProtocol: AnyObject {
     
     // PRESENTER -> INTERACTOR
     func touchAddButton(user: UserPost)
+    func touchEditButton(user: UserPost)
+
 }

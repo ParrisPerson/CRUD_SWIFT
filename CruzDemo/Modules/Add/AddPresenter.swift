@@ -8,6 +8,7 @@ import Foundation
     var interactor: AddInteractorInputProtocol?
     var wireFrame: AddWireFrameProtocol?
     
+    var user : UserPost? = nil
     
     func viewDidLoad() {
         
@@ -17,6 +18,11 @@ import Foundation
         self.view?.showProgress()
         interactor!.touchAddButton(user: user)
         
+    }
+    
+    func touchEditButton(user: UserPost) {
+        self.view?.showProgress()
+        interactor!.touchEditButton(user: user)
     }
     
 }

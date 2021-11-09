@@ -33,6 +33,9 @@ class AddView: BaseView {
         return button
     }()
     
+    let datePicker = UIDatePicker()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,39 +43,77 @@ class AddView: BaseView {
         view.addSubviews( add, nameTextField, birthTextField)
         self.navigationController?.navigationBar.isHidden = false
         showTitle()
-        title = "ADD"
+        if presenter?.user != nil {
+            title = "EDIT"
+            add.setTitle("EDIT", for: .normal)
+            add.addTarget(self, action: #selector(touchEditButton), for: .touchUpInside)
+            birthTextField.text = presenter?.user?.birthdate
+            nameTextField.text = presenter?.user?.name
+            
+        }else{
+            title = "ADD"
+            add.addTarget(self, action: #selector(touchAddButton), for: .touchUpInside)
+            add.setTitle("ADD", for: .normal)
+        }
         
         
         setupConstraints()
          
         self.presenter?.viewDidLoad()
-        
-        
-        add.addTarget(self, action: #selector(touchAddButton), for: .touchUpInside)
-         
+ 
+        showDatePicker()
     }
+    
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
+
+       //ToolBar
+       let toolbar = UIToolbar();
+       toolbar.sizeToFit()
+       let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+      let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+
+     toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+
+        birthTextField.inputAccessoryView = toolbar
+        birthTextField.inputView = datePicker
+
+     }
+
+      @objc func donedatePicker(){
+
+       let formatter = DateFormatter()
+       formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        birthTextField.text = formatter.string(from: datePicker.date)
+       self.view.endEditing(true)
+     }
+
+     @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+      }
     
     @objc func touchAddButton() {
         if nameTextField.text != "" && birthTextField.text != "" {
             let user = UserPost()
             user.name = nameTextField.text ?? ""
-            
             user.id = 0
-            let dateFormatter = DateFormatter()
-           
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-            if let date = dateFormatter.date(from: "2021-11-07T20:00:04.625Z") {
-                user.birthdate = dateFormatter.string(from: Date())
-            } else {
-                user.birthdate = ""
-            }
-            
-            
-            print(user)
-           
-            
-           
+            user.birthdate = birthTextField.text!
+
             presenter?.touchAddButton(user: user)
+        }
+        
+    }
+    
+    @objc func touchEditButton() {
+        if nameTextField.text != "" && birthTextField.text != "" {
+            let user = UserPost()
+            user.name = nameTextField.text ?? ""
+            user.id = presenter?.user?.id
+            user.birthdate = birthTextField.text!
+
+            presenter?.touchEditButton(user: user)
         }
         
     }

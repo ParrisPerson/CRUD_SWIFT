@@ -14,6 +14,7 @@ protocol MainWireFrameProtocol: BaseWireFrameProtocol {
     
     // PRESENTER -> WIREFRAME
     func goToAdd()
+    func goToAddEdit(user: UserPost) 
 }
 
 protocol MainPresenterProtocol: BasePresenterProtocol {
@@ -25,7 +26,7 @@ protocol MainPresenterProtocol: BasePresenterProtocol {
     func getUsers() -> [User]
     func touchAddButton()
     func touchDeleteButton(id: Int)
-    func touchEditButton()
+    func touchEditButton(user: UserPost)
 }
 
 protocol MainInteractorOutputProtocol: AnyObject {

@@ -9,7 +9,7 @@ import UIKit
 
 class AddWireFrame: BaseWireFrame {
     
-    class func createModule() -> BaseView {
+    class func createModule(user: UserPost?) -> BaseView {
         let view = AddView()
         let presenter: AddPresenterProtocol & AddInteractorOutputProtocol = AddPresenter()
         let interactor: AddInteractorInputProtocol = AddInteractor()
@@ -17,6 +17,7 @@ class AddWireFrame: BaseWireFrame {
         
         view.presenter = presenter
         presenter.view = view
+        presenter.user = user 
         presenter.wireFrame = wireFrame
         presenter.interactor = interactor
         interactor.presenter = presenter
@@ -26,7 +27,7 @@ class AddWireFrame: BaseWireFrame {
 }
 
 extension AddWireFrame: AddWireFrameProtocol {
-    
+       
     
 }
 
